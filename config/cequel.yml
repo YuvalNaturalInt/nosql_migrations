@@ -1,0 +1,25 @@
+development:
+  host: '127.0.0.1'
+  port: 9042
+  keyspace: nosql_migrations_development
+  max_retries: 3
+  retry_delay: 0.5
+
+test:
+  host: '127.0.0.1'
+  port: 9042
+  keyspace: nosql_migrations_test
+  max_retries: 3
+  retry_delay: 0.5
+
+production:
+  hosts:
+    - 'cass1.nosql_migrations.biz'
+    - 'cass2.nosql_migrations.biz'
+    - 'cass3.nosql_migrations.biz'
+  port: 9042
+  keyspace: nosql_migrations_production
+  username: 'myappuser'
+  password: 'password1'
+  max_retries: 3
+  retry_delay: 0.5
