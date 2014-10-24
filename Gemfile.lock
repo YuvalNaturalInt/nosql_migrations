@@ -1,3 +1,15 @@
+PATH
+  remote: ../mongify
+  specs:
+    mongify (1.2.4)
+      activerecord
+      activesupport
+      bson (~> 1.10.2)
+      bson_ext (~> 1.10.2)
+      cassandra-driver (~> 1.0.0.beta)
+      highline (>= 1.6.1)
+      mongo (~> 1.10.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -32,6 +44,8 @@ GEM
     bson_ext (1.10.2)
       bson (~> 1.10.2)
     builder (3.2.2)
+    cassandra-driver (1.0.0.beta.1)
+      ione (~> 1.0)
     cequel (1.4.5)
       activemodel (>= 3.1, < 5.0)
       cql-rb (>= 1.2, < 3.0)
@@ -63,13 +77,6 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.25.1)
     minitest (5.4.2)
-    mongify (0.3.1)
-      activerecord (>= 3.0.3)
-      activesupport (>= 3.0.3)
-      bson_ext (>= 1.1.5)
-      highline (>= 1.6.1)
-      mongo (>= 1.1.5)
-      mysql2
     mongo (1.10.2)
       bson (= 1.10.2)
     multi_json (1.10.1)
@@ -142,7 +149,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 2.0)
   jquery-rails
-  mongify
+  mongify!
   mysql2
   rails (= 4.1.5)
   sass-rails (~> 4.0.3)

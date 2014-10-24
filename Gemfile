@@ -38,7 +38,7 @@ gem 'unicorn'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'mongify'
+gem 'mongify', :path => '../mongify'
 
 gem 'cequel'
 
