@@ -11,15 +11,16 @@
 #
 default: &default
   adapter: mysql2
+  host: <%=ENV['IP']%>
+  port: 3306
   encoding: utf8
-  pool: 5
-  username: root
+  username: <%=ENV['C9_USER']%>
   password:
-  socket: /tmp/mysql.sock
+
 
 development:
   <<: *default
-  database: nosql_migrations_development
+  database: sakila
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

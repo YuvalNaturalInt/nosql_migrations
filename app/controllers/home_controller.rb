@@ -18,6 +18,8 @@ class HomeController < ApplicationController
     @is_databases_valid = check_sql_connection && check_nosql_connection
 
     @translation_string = @translation.print
+    
+    puts @translation_string
 
     tables_with_one_reference = []
 
@@ -40,9 +42,12 @@ class HomeController < ApplicationController
         end
       end
     end
-
-    @translation.process(@configuration.sql_connection, @configuration.no_sql_connection)
-
+    
+    begin
+      @translation.process(@configuration.sql_connection, @configuration.no_sql_connection)
+    rescue Exception => exception
+      puts exception.backtrace
+    end
 
   end
 
